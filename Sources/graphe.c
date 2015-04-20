@@ -32,3 +32,8 @@ L_SOMMET* creer_graphe(FILE* fichier,int* taille_table){ // on va retourner en a
 	taille_table=nombre_mots;
 	return (Table_hachage)
 }
+
+void recherche_successeur(T_GRAPHE G,)
+
+
+
