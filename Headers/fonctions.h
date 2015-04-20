@@ -11,4 +11,6 @@
 
 int hash(char mot[], int a,int n);
 
+
+
 #endif /* defined(____fonctions__) */
