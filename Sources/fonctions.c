@@ -21,3 +21,24 @@ int hash(char mot[], int a,int n){
 }
 
 
+
+
+/* Je fais une fonction pour savoir si il y a exactement une lettre de différence entre deux chaines de caractères*/
+
+int difference_une_lettre(char* mot1, char* mot2,int taille_mot){
+	
+	int i=0;
+	int metagramme=0;
+	int compteur = 0;
+	
+	for(i=0,i<taille_mot,i++){
+		if(mot1[i]!=mot2[i])compteur ++;
+	}
+	if(compteur == 1)metagramme =1;
+	return metagramme;
+}/*Cette fonction retourne 1 si les deux mots différent exactement d'une lettre*/
+
+
+
+
+
