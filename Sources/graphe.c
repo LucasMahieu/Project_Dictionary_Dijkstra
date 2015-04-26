@@ -33,7 +33,7 @@ L_SOMMET* creer_graphe(FILE* fichier,int* taille_table){ // on va retourner en a
 	return (Table_hachage)
 }
 
-void recherche_successeur(T_GRAPHE G,int taille_mot)
+void recherche_successeur(T_GRAPHE G,int taille_mot){
 
 	
 	int i = 0;
@@ -56,23 +56,25 @@ void recherche_successeur(T_GRAPHE G,int taille_mot)
 	d'une lettre avec le sommet auquel on s'intéresse. Si c'est le cas on ajout en tête ce mot_remplissage formé à la liste de 
 	successeur du mot en question. Il faut par ailleurs que le mot_remplissage modifié appartienne au fichier texte*/
 	
-	for(j=0, j<26,j++){/*26 correspond à l taille de l'aphabet que l'on doit parcourir*/
-		while (fgets(mot_fichier, taille_mots+2,f1)!=NULL){
-			if(strcmp(mot_fichier,mot_remplissage) == 0){/*Si le mot "mot_remplissage" appartient au fichier texte, on peut alors chercher à parcourir la table de hashage.*/
-				for(m=0,m<taille_table,m++){
-					p = Table_hachage[m];
-					while(p->suiv != NULL){
-					/*Il faut chercher à savoir il y a exactement une lettre de différence, on utilise la fonction du fichier "fontions.c"*/
-						if(difference_une_lettre(mot_remplissage,(p->valeur)->mot,taille_mot)==1){/*Il faut pointer sur le mot qui corresponf au valeur de T_SOMMET*/
-							ajout_tete(mot_remplissage,(p->valeur)->Liste_succ);/*On ajoute en tête si le mot est bien un métagramme*/
+	for(k=0,k<26,k++){
+		for(j=0, j<26,j++){/*26 correspond à l taille de l'aphabet que l'on doit parcourir*/
+			while (fgets(mot_fichier, taille_mots+2,f1)!=NULL){
+				if(strcmp(mot_fichier,mot_remplissage) == 0){/*Si le mot "mot_remplissage" appartient au fichier texte, on peut alors chercher à parcourir la table de hashage.*/
+					for(m=0,m<taille_table,m++){
+						p = Table_hachage[m];
+						while(p->suiv != NULL){
+						/*Il faut chercher à savoir il y a exactement une lettre de différence, on utilise la fonction du fichier "fontions.c"*/
+							if(difference_une_lettre(mot_remplissage,(p->valeur)->mot,taille_mot)==1){/*Il faut pointer sur le mot qui corresponf au valeur de T_SOMMET*/
+								ajout_tete(mot_remplissage,(p->valeur)->Liste_succ);/*On ajoute en tête si le mot est bien un métagramme*/
+							}
 						}
 					}
 				}
 			}
-		}
 		mot_remplissage[0]=alphabet[j];/*On modifie la dernière lettre de mot_remplissage, en utilisant alphabet*/
-		/*Mais comment faire pour avoir tous les cas ? */
+		}	/*Mais comment faire pour avoir tous les cas ? On sait qu'il y aura 26^taille_mot combinaisons */
+		mot remplissage[1]=alphabet[k];
 	}
-	
-	
+
+}	
 
