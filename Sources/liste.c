@@ -1,12 +1,12 @@
 //
-//  liste.c
+//  liste_succ.c
 //  
 //
-//  Created by Jonathan Hérault on 07/02/2015.
+//  Created by Lucas MAHIEU on 18/04/2015.
 //
 //
 
-#include "./Header/main.h"
+#include "../Headers/main.h"
 
 
 Liste creer_liste(void) {

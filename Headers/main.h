@@ -11,12 +11,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-#include "./Header/sommet.h"
-#include "./Header/succ.h"
-#include "./Header/liste_succ.h"
-#include "./Header/fonction.h"
-#include "./Headers/graphe.h"
+#include "types.h"
+#include "fonctions.h"
 
 
 

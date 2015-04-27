@@ -11,6 +11,10 @@
 
 int hash(char mot[], int a,int n);
 
+int taille_fichier(FILE* fichier); 
 
+L_SOMMET* creer_graphe(char* fichier,int* taille_table,int taille_mots);
+
+int Taille_Mots(char*);
 
 #endif /* defined(____fonctions__) */
