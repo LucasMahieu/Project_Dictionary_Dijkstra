@@ -20,6 +20,24 @@ int hash(char mot[], int a,int n){
 	return h;
 }
 
+int Taille_Mots(FILE* fichier){
+	int i = 0;
+	char* chaine =NULL;
+	int N = 20; /*Permet de déterminer la longueur des mots, pas de mots aussi long et seulement détection des retours à la ligne*/
+
+	FILE* f1 = fopen(fichier,"r");
+	if (f1==NULL) return 1;
+	
+	chaine = fgets(mot_fichier,N,f1);	
+	if(mot_fichier[i]!='\n'){
+		i++;
+	}
+return i;	
+}
+
+
+
+
 
 int taille_fichier(FILE* fichier){
 	int i=0;
