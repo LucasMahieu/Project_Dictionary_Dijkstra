@@ -28,6 +28,7 @@ int Taille_Mots(FILE* fichier){
 	if(mot_fichier[i]!='\n'){
 		i++;
 	}
+fclose(fichier);
 return i;	
 }
 
