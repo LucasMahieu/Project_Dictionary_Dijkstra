@@ -10,7 +10,7 @@
 #define ____fonctions__
 
 int hash(char mot[], int a,int n);
-int difference_une_lettre(char* mot1, char* mot2,int taille_mot);
+void recherche_successeur(T_GRAPHE G,int taille_mot);
 
 
 
