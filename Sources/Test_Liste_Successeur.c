@@ -20,7 +20,7 @@ void main(int argc, char** argv){
 	scanf("%d",&n); /*On se a place à un certain point dans la table de hashage et on affiche l'ensemble de la liste associée*/
 
 	while(!(G.table + n)){
-		visualiser_liste((G.table + n)->valeur)->Liste_succ));
+		visualiser_liste((G.table + n)->val)->Liste_succ));
 		(G.table + n) = (G.table + n)->suiv; /*On parcours l'ensemble des élements associés à une place dans la table de hashage*/ 
 	}
 }
