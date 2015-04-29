@@ -28,7 +28,7 @@ int Taille_Mots(FILE* fichier){
 	FILE* f1 = fopen(fichier,"r");
 	if (f1==NULL) return 1;
 	
-	chaine = fgets(mot_fichier,N,f1);	
+	chaine = fgets(mot_fichier,N,f1);/*On range les caractères lues dans une chaine de caractère quelconque*/	
 	if(mot_fichier[i]!='\n'){
 		i++;
 	}
