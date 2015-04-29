@@ -10,7 +10,7 @@
 #define ____fonctions__
 
 int hash(char mot[], int a,int n);
-void recherche_successeur(T_GRAPHE G,int taille_mot);
+void recherche_successeur(T_GRAPHE G,int taille_mot, int nombre_mot,int taille_table);
 
 int taille_fichier(FILE* fichier); 
 
