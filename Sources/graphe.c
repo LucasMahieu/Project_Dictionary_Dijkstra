@@ -33,7 +33,7 @@ L_SOMMET* creer_graphe(FILE* fichier,int* taille_table){ // on va retourner en a
 	return (Table_hachage)
 }
 
-void recherche_successeur(T_GRAPHE G,int taille_mot){
+void recherche_successeur(T_GRAPHE G,int taille_mot, int nombre mot,int taille_table tf){
 
 	
 	int i = 0;
@@ -45,7 +45,7 @@ void recherche_successeur(T_GRAPHE G,int taille_mot){
 	dans le mot "mot"*/
 	L_SOMMET* p = NULL;/* On prend un pointeur pour pouvoir parcourir les listes associées à la table de hachage*/
 	L_SOMMET* q = NULL;
-	q = G->Table;
+	q = G.Table;
 	T_SOMMET* r = NULL;
 	
 	FILE* f1 = fopen(fichier,"r");    // On ouvre le fichier dans f1
@@ -56,17 +56,23 @@ void recherche_successeur(T_GRAPHE G,int taille_mot){
 	
 	for(k=0,k<taille_mot,k++){
 		/*On initialise le "mot_remplissage"*/
-		for(m=0,m<taille_table,m++){
-		mot_remplissage=(p[m]->valeur)->mot;
-			for(j=0, j<26,j++){
-				mot_remplissage[k]=alphabet[j];	/*On modifie mot_remplissage avec le tableua alphabet*/
-				Position = hash(mot_remplissage,CODE_HACHAGE,nombre_mots);/*On hash le mot_remplissage et on regarde si il appartient à la table de hasgae*/
-					while(!est_vide(q[Position]){/*On parcours l'ensemble des L_SOMMET de la table de hashage*/
-					r = rech(mot_remplissage,(q[Position]->valeur));/*On recherche si le mot_remplissage est bien présent dans la tablde hashage*/
+		for(m=0,m<taille_table,m++){$
+			p = G.table+m;
+			while(!est_vide(p)){/*On parcours l'ensemble des éléments associés à la case G.Table+m de la table de hashage*/
+			mot_remplissage=(p->val)->mot;
+				for(j=0, j<26,j++){
+					mot_remplissage[k]=alphabet[j];	/*On modifie mot_remplissage avec le tableau alphabet*/
+					Position = hash(mot_remplissage,CODE_HACHAGE,nombre_mots);/*On hash le mot_remplissage et on regarde si il appartient à la table de hasgae*/
+						while(!est_vide(q[Position]){/*On parcours l'ensemble des L_SOMMET de la table de hashage associé à la position sur laquelle on a placé le mot_remplissage*/
+						r = rech(mot_remplissage,(q[Position]->val));/*On recherche si le mot_remplissage est bien présent dans la tablde hashage*/
 						if(!r){/*Si mot_remplissage est présent dans la table de hashage, on peut faire un ajout en tête*/
-							ajout_tete(mot_remplissage,(p->valeur)->Liste_succ);}/*On ajoute en tête si le mot est bien un métagramme présent dans la table de hashage*/
-							q[Position]= q[Position]->suiv;
-					}
+							ajout_tete(mot_remplissage,((G.table+m)->val)->Liste_succ);
+						}/*On ajoute en tête si le mot est bien un métagramme présent dans la table de hashage*/
+						q[Position]= q[Position]->suiv;
+						}
+				}
+				p=p->suiv;
+				
 			}
 	}
 }
