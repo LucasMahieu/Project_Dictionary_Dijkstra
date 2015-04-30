@@ -34,10 +34,6 @@ typedef struct t_graphe{
 } T_GRAPHE;
 
 
-
-
-
-
 typedef T_SUCC ELEMENT;//Ici l'element est un T_SUCC
 typedef L_SUCC Liste;  // pour bien comprendre que notre type 'Liste' d'avant c'est bien la meme chose que  'L_SUCC'.
 

@@ -7,15 +7,17 @@ int main(int argc,char** argv){ // le main va prendre 2 arg. le fichier de mots 
 	if (argc<1) {
 		return 0;
 	}
-	int taille_mots = Taille_Mots(argv[1]);
-	G.table=creer_graphe(argv[1],&(G.taille),taille_mots);  
+	FILE* f1=fopen(argv[1],"r");
+	
+	int taille_mots = Taille_Mots(f1);
+	G.table=creer_graphe(f1,&(G.taille),taille_mots);  
 	
 	  while(1){
 	
     	printf("Quelle position dans la table ? \n");
     	scanf("%d",&n); /*On se a place à un certain point dans la table de hashage et on affiche l'ensemble de la liste associée*/
 
-     visualiser_liste(G.table+n);
+     visualiser_liste(*(G.table+n));
      
     getchar();
 	  }

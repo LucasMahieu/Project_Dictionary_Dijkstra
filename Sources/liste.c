@@ -29,16 +29,16 @@ Liste ajout_tete(ELEMENT e, Liste L)
 
 Liste rech_chaine(char* chaine, Liste L)
 {   Liste p=L;
-	while(!est_vide(p)&&(compare_chaine(chaine,&(p->val))!=0)) p=p->suiv;
+	while(!est_vide(p)&&(strcmp(chaine,(p->val)->mot)!=0)) p=p->suiv;
 	return p;
 }
 
-Liste rech(ELEMENT e, Liste L)
+/*Liste rech(ELEMENT e, Liste L)
 {   Liste p=L;
-	while(!est_vide(p)&&(compare(&(p->val),&e)!=0)) p=p->suiv;
+	while(!est_vide(p)&&((&(p->mot),&e)!=0)) p=p->suiv;
 	return p;
 }
-
+*/
 
 int taille_liste(Liste l) {
 	int i=0;
@@ -52,7 +52,7 @@ int taille_liste(Liste l) {
 void visualiser_liste(Liste L)
 {   Liste p=L;
 	while(!est_vide(p)) {
-		affiche(&(p->val));
+		printf("%s \n",(p->val->mot));
 		p=p->suiv;
 	}
 }

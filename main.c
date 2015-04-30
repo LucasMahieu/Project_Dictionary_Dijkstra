@@ -16,7 +16,7 @@ int main (FILE* f,int taille_mots){  // le main va prendre 2 arg. le fichier de 
 	G.table = creer_graphe(f,&(G.taille));   // ici, le scelette du graphe est creer = tous les mots sont rangés selon le hachoire
 =======
 	G.table=creer_graphe(f,&(G.taille));   // ici, le squelette du graphe est créé = tous les mots sont rangés selon le hachoire
->>>>>>> 5d7dd6111c8b9a26295107c15a650b5bb9190961
+
 	
 /*Création de la liste de successeur
 	On prend un mot on change une lettre et on regarde si le nouveau mot appartient au fichier. 
