@@ -6,3 +6,4 @@ Test_Table_Hashage: Test_Table_Hashage.o fonctions.o liste.o graphe.o
 
 %.o: Sources/%.c
 	gcc -c $<  $(CFLAGS)
+

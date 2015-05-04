@@ -33,17 +33,8 @@ typedef struct t_graphe{
 	int taille;
 } T_GRAPHE;
 
-
-typedef T_SUCC ELEMENT;//Ici l'element est un T_SUCC
 typedef L_SUCC Liste;  // pour bien comprendre que notre type 'Liste' d'avant c'est bien la meme chose que  'L_SUCC'.
 
-Liste creer_liste(void);
-int est_vide(Liste L);
-Liste rech(ELEMENT e, Liste L);
-Liste rech_chaine(char* chaine, Liste L);
-Liste ajout_tete(ELEMENT e, Liste L);
-int taille_liste(Liste l);
-void visualiser_liste(Liste L);
-// d'autre fnctions de listes sont dispo dans le TD9
 
 #endif
+
