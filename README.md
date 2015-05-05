@@ -35,3 +35,8 @@ Lucas 18.04. :
 
 
 
+5.5.15 - LUCAS
+Le depot git est à jour et je pense avoir compris pas mal de chose ;) 
+
+
+
