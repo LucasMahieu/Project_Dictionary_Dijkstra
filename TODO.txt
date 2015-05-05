@@ -9,3 +9,6 @@ OK
 
 mtn on va toucher au deux à la fois
 ici il y à peu etre un soucis
+
+
+Tout ces tests on marché, en fait il faut faire super attention à ne pas bosser la ou bosse l'autre ... sinon il y aura tjs des conflies de merge (de fusions)
