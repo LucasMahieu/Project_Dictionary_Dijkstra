@@ -34,4 +34,3 @@ int main(int argc,char** argv){ // le main va prendre 2 arg. le fichier de mots 
 	if((fclose(f1))==0)  return 1; 
 	return 0;
 }
-

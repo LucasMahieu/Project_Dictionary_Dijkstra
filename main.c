@@ -22,12 +22,6 @@ int main (FILE* f,int taille_mots){  // le main va prendre 2 arg. le fichier de 
 	On prend un mot on change une lettre et on regarde si le nouveau mot appartient au fichier. 
 	Si c'est le cas on ajoute ce mot en successeur avec un ajout tête. Il faut parcourrir l'ensemble 
 	des élements de la table de hashage*/
-	
-	
-	
 
-	
-	
-	
 	
 }

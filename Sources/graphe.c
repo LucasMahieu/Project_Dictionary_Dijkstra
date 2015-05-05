@@ -67,3 +67,43 @@ void Recherche_Successeur(T_GRAPHE G,FILE* f1,int taille_mots, int nombre_mots,i
 	}
 	rewind(f1);
 }
+
+
+
+/*0n applique l'algorithme de Dijkstra*/
+
+void plus_court_chemin(char* depart, char* arrive, int nombre_mots, T_GRAPHE G, FILE* fichier, int taille_mots){
+
+	int i; 
+	int* pcc;
+	int infini = INT_MAX;
+	int position; /*Utilisé pour localiser le mot depart dans la table de hashage*/ 
+	
+	T_GRAPHE C ; /*On définit le tableau C des sommets à visiter. EST CE QUE POINTEUR SUR L_SOMMET PEUT SUFFIR ?*/
+	L_SOMMET* S; /*On définit le tableau S des sommets visités*/
+	L_SUCC pointeur_sur_depart;
+
+
+	C =Creer_Graphe(fichier,taille_mots);/*On crée un graphe avec tous les mots du fichier*/
+	Recherche_Successeur(C,fichier,taille_mots,nombre_mots,taille_fichier);/* On recomplète l'ensemble des successeurs associé à chacun des mots du fichier*/ 
+
+
+	pcc = calloc(nombre_mots,sizeof(*pcc));/*On alloue un tableau pour retenir toutes les valeurs de cout, valeur de PCC*/
+
+	/**************On initialise l'ensemble des élements de PCC************/ 
+	pcc[0]=0;/*La distance du mot "départ" à lui même est de zéro*/
+	for(i=1,i<nombre_mots,i++){
+		pcc[i]=infini;
+	}
+
+
+	/**************On applique l'algorithme************/ 
+	position = Hash(depart,CODE_HASHAGE,nombre_mots);/*On regarde où se situe notre mot de "départ" dans la table de hashage*/ 
+	/*On va chercher dans les successeurs de mot "départ" pour déterminer le départ du chemin suivant, voir graphe.On se positionne dans la table de hashage là où se trouve le mot "depart" et on regarde la liste de successeur*/ 
+	pointeur_sur_depart = Rech_Chaine(mot_remplissage,*(C.table+position));/*Retourne un pointeur sur où se trouve le mot dans la liste associé à l'endroit où se trouve mot "depart" dans la table de hashage. C'est un pointeur sur un l-succ*/
+	/*On va parcourir l'ensemble de la table des successeurs associé à "depart". De cette manière on peut parcourir tous les élements qui sont à plus proche distance de depart*/
+	q = pointeur_sur_depart;
+	while(!q){
+		positionq
+		q = q->suiv;
+>>>>>>> cb6d8e39420963c3699e85c9c9b69ea5cdcf207a
