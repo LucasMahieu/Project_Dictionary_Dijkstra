@@ -26,7 +26,7 @@ L_SUCC Rech_Chaine(char* chaine, L_SOMMET L);
 T_SUCC Ajout_Tete(char* e, L_SUCC L,int taille_mots);
 L_SUCC Ajout_Tete_L_SUCC(T_SUCC e, L_SUCC L);
 int Taille_Liste(Liste l);
-void Visualiser_Liste(Liste L);
+void Visualiser_Liste(L_SUCC L);
 // d'autre fnctions de listes sont dispo dans le TD9
 
 #endif /* defined(____fonctions__) */

@@ -1,4 +1,4 @@
-CFLAGS=-g -O2 -I./Headers
+CFLAGS=-g -I./Headers
 LDFLAGS= -lm
 
 Test_Table_Hashage: Test_Table_Hashage.o fonctions.o liste.o graphe.o
