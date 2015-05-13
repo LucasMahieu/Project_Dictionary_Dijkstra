@@ -30,8 +30,8 @@ T_SUCC Ajout_Tete(char* e, L_SUCC L,int taille_mots)   // ajout en tete de liste
 
 L_SUCC Ajout_Tete_L_SUCC(T_SUCC e, L_SUCC L)  // ajout en tete de liste de L_SUCC d'un element de type T_SUCC
 {
-	L_SUCC* p;
-	if ((p=(L_SUCC*)calloc(1,sizeof(*p)))==NULL) return NULL;
+	L_SUCC p;
+	if ((p=(L_SUCC)calloc(1,sizeof(*p)))==NULL) return NULL;
 	p->val=e;
 	p->suiv=L;
 	return p;
@@ -68,10 +68,6 @@ void Visualiser_Liste(L_SUCC L)
 		p=p->suiv;
 	}
 }
-
-
-
-
 
 
 

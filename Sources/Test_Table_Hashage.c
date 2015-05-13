@@ -4,11 +4,11 @@
 int main(int argc,char** argv){ // le main va prendre 2 arg. le fichier de mots et la tailles max des mots
   	T_GRAPHE G;
   	int n;
-//	if (argc<1) {
-//		return 0;
-//	}
+	if (argc<1) {
+		return 0;
+	}
 	FILE* f1;
-	if( ( f1=fopen("test_mot3.txt","r") ) == NULL ) return 1;
+	if( ( f1=fopen(argv[1],"r") ) == NULL ) return 1;
 	
 	int taille_mots = Taille_Mots(f1);
 	int nombre_mots = Taille_Fichier(f1);

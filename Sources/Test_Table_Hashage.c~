@@ -8,13 +8,14 @@ int main(int argc,char** argv){ // le main va prendre 2 arg. le fichier de mots 
 //		return 0;
 //	}
 	FILE* f1;
-	if( ( f1=fopen("test_mot3.txt","r") ) == NULL ) return 1;
+	if( ( f1=fopen("../umot12.txt","r") ) == NULL ) return 1;
 	
 	int taille_mots = Taille_Mots(f1);
 	int nombre_mots = Taille_Fichier(f1);
 	
 	printf("taille des mots = %d \n",taille_mots);
 	G.table=Creer_Graphe(f1,taille_mots,nombre_mots);
+	if(G.table==NULL)return 0;
 	G.taille=Taille_Fichier(f1);
 	
 	  while(1){

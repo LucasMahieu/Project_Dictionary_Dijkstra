@@ -71,7 +71,3 @@ void Visualiser_Liste(L_SUCC L)
 
 
 
-
-
-
-

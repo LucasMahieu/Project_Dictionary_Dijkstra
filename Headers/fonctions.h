@@ -10,12 +10,8 @@
 #define ____fonctions__
 
 int Hash(char mot[], int a,int n,int taille_mots);
-
-void Recherche_Successeur(T_GRAPHE G,FILE* f1,int taille_mot, int nombre_mots,int taille_table);
-
-
+void Recherche_Successeur(T_GRAPHE G,FILE* f1,int taille_mot, int nombre_mots);
 L_SOMMET* Creer_Graphe(FILE* fichier,int taille_mots, int nombre_mots);
-
 int Taille_Mots(FILE*);
 int Taille_Fichier(FILE* fichier); 
 void Affiche(char* chaine);
