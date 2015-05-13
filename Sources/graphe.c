@@ -67,7 +67,6 @@ void Recherche_Successeur(T_GRAPHE G,FILE* f1,int taille_mots, int nombre_mots){
 	rewind(f1);
 }
 
-/*
 
 //0n applique l'algorithme de Dijkstra
 
@@ -83,7 +82,7 @@ void plus_court_chemin(char* depart, char* arrive, int nombre_mots, T_GRAPHE G, 
 	L_SUCC pointeur_sur_depart;
 
 
-	C =Creer_Graphe(fichier,taille_mots);//On crée un graphe avec tous les mots du fichier
+	C.table =Creer_Graphe(fichier,taille_mots);//On crée un graphe avec tous les mots du fichier
 	Recherche_Successeur(C,fichier,taille_mots,nombre_mots,taille_fichier);// On recomplète l'ensemble des successeurs associé à chacun des mots du fichier
 
 
@@ -109,4 +108,4 @@ void plus_court_chemin(char* depart, char* arrive, int nombre_mots, T_GRAPHE G, 
 		
 		
 		
-*/		
+	

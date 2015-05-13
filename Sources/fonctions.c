@@ -8,8 +8,6 @@
 
 #include "../Headers/main.h"
 
-
-
 int Hash(char mot[], int a,int nombre_mots,int taille_mots){  // vérifié le 04/05 lucas
 	int i=taille_mots-1;
 	int h=1;
