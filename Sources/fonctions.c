@@ -66,11 +66,28 @@ char** Remplissage_Tableau(FILE* fichier, int taille_fichier,int taille_mots){
 }
 
 
+char** Ajout_Mot_Tableau(FILE* fichier,char** S,int taille_mots, char* mot, int *taille_tableau){
+    
+    char** tableau_final;
+    int i = 0;
+    int j = 0;
+    
+    tableau_final = (char**)calloc(*taille_tableau+1,sizeof(*(tableau_final)));//On alloue un nouveau que l'on retournera avec une case en plus
+    for(j=0;j<*taille_tableau+1;j++){
+        *(tableau+j) = (char*)calloc(taille_mots,sizeof(**tableau));//on alloue de la place pour tous les mots
+    }
+    
+    for(i=0,i<*taille_tableau,i++){
+        strcpy(*(S+i),*(tableau_final+i));//On recopie tous les élements du tableau initial dans le nouveau tableau
+        free(*(S+i));//On libére l'espace mémoire précedemment allloué
+    }
+    
+    free(S);
+    strcpy(*(tableau_final+(*taille_tableau)),mot);//"taille_tableau" pour ce placer en fin de tableau, on copie le mot en fin de tableau
 
-
-
-
-
+    *taille_tableau = *taille_tableau + 1;//On retourne par adresse la nouvelle taille du tableau
+    return tableau_final;//On retourne le tableau final complété
+}
 
 int Recherche_Mot_Tableau(char** tableau,char* mot, int taille_tableau, int *position){
     int i = 0;
@@ -83,9 +100,6 @@ int Recherche_Mot_Tableau(char** tableau,char* mot, int taille_tableau, int *pos
     *postion = k-1; //Permet de retourner la position dans le tableau du mot recherché
     return i;//Retourne 1 si le mot est présent dans le tableau, 0 sinon
 }
-
-
-
 
 
 int Suppression_Dans_Tableau(char** tableau, char* mot_a_supprimer, int taille_tableau, int taille_mots){
