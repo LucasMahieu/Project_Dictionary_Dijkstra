@@ -23,6 +23,10 @@ T_SUCC Ajout_Tete(char* e, L_SUCC L,int taille_mots);
 L_SUCC Ajout_Tete_L_SUCC(T_SUCC e, L_SUCC L);
 int Taille_Liste(Liste l);
 void Visualiser_Liste(L_SUCC L);
+char** Remplissage_Tableau(FILE* fichier, int taille_fichier,int taille_mots);
+char** Ajout_Mot_Tableau(FILE* fichier,char** S,int taille_mots, char* mot, int taille_tableau);
+int Recherche_Mot_Tableau(char** tableau,char* mot, int taille_tableau, int *position);
+int Suppression_Dans_Tableau(char** tableau, char* mot_a_supprimer, int taille_tableau);
 // d'autre fnctions de listes sont dispo dans le TD9
 
 #endif /* defined(____fonctions__) */
