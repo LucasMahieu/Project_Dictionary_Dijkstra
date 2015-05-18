@@ -27,4 +27,5 @@ char** Remplissage_Tableau(FILE* fichier, int taille_fichier,int taille_mots);
 char** Ajout_Mot_Tableau(char** S,int taille_mots, char* mot, int* taille_tableau);
 char** Recherche_Mot_Tableau(char** tableau,char* mot, int taille_tableau);
 int Suppression_Dans_Tableau(char** tableau, char* mot_a_supprimer, int taille_tableau);
+
 #endif /* defined(____fonctions__) */

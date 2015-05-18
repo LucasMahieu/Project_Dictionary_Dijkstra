@@ -69,7 +69,7 @@ void Recherche_Successeur(T_GRAPHE G,FILE* f1,int taille_mots, int nombre_mots){
 
 
 //0n applique l'algorithme de Dijkstra
-/*
+
 void plus_court_chemin(char* depart, char* arrive, int nombre_mots, T_GRAPHE G, FILE* fichier, int taille_mots){
 
 	int i; 
@@ -107,5 +107,5 @@ void plus_court_chemin(char* depart, char* arrive, int nombre_mots, T_GRAPHE G, 
 		
 		
 		
-	*/	
+		
 	

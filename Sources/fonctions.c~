@@ -87,7 +87,7 @@ char** Ajout_Mot_Tableau(char** S,int taille_mots, char* mot, int *taille_tablea
         *(tableau_final+j) = (char*)calloc(taille_mots,sizeof(**tableau_final));//on alloue de la place pour tous les mots
     }
     
-    for(i=0;i<*(taille_tableau);i++){
+    for(i=0;i<*(taille_tableau-1);i++){
         strcpy(*(tableau_final+i),*(S+i));//(dest,source)On recopie tous les élements du tableau initial dans le nouveau tableau
         free(*(S+i));//On libére l'espace mémoire précedemment allloué
     }
@@ -122,7 +122,7 @@ int Suppression_Dans_Tableau(char** tableau, char* mot_a_supprimer, int taille_t
     
     if(position == NULL) return 0; // Si le mot n'est pas dans le tableau on sort de la fonction
     
-    for(i=position; i<(tableau+taille_tableau-1);i++){
+    for(i=position; i<(tableau+taille_tableau);i++){
         strcpy(*(i),*(i+1));  // (dest,source)
     }
     *(tableau+taille_tableau-1) = NULL;
