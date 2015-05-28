@@ -19,8 +19,9 @@ int main(int argc,char** argv){
 //On se a place à un certain point dans la table de hashage et on affiche l'ensemble de la liste associée
 	    	printf("Quelle position dans la table ? \n");
 	    	scanf("%d",&n); 
-// On affiche chaque mot de la table pour prouver le fonctionneemnt de toutes ces focntions	    	
+	    	
 		Visualiser_Liste(*((G.table)+n));
+		printf("n choisi est: %d \n",n);
 		getchar();
 	}
 	if((fclose(f1))==0)  return 1;

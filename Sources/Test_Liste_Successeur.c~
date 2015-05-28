@@ -10,6 +10,7 @@ int main(int argc, char** argv){
 //		return 0;
 //	}
 
+	
 	FILE* f1;
 	if( ( f1=fopen("test_mot3.txt","r") ) == NULL ) return 1;
 	
@@ -27,8 +28,7 @@ int main(int argc, char** argv){
 		printf("Quelle position dans la table ? \n");
 		scanf("%d",&n); 
 		p=*((G.table)+n);
-		printf("Table de HASHAGE en %d\n",n);
-// On visualise la liste de succ issue du mots pointé par p		
+		printf("Table de HASHAGE en n\n");
 		Visualiser_Liste(p);
 		while(p){
 			printf("Liste %d\n",i);

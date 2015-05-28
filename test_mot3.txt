@@ -1,9 +1,9 @@
 bar
 bac
+bel
+bam
+ber
 car
-les
-lac
 nid
 sol
-dod
 bol
